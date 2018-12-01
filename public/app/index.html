@@ -410,7 +410,7 @@
               <div class="card">
                 
                 <!-- Card header -->
-                <div class="card-header">Radar Chart</div>
+                <div class="card-header">Monthly Comparison</div>
                 
                 <!--Card content-->
                 <div class="card-body">
@@ -454,7 +454,7 @@
               <div class="card">
                 
                 <!-- Card header -->
-                <div class="card-header">Horizontal Bar Chart</div>
+                <div class="card-header">Weekly Earning Chart</div>
                 
                 <!--Card content-->
                 <div class="card-body">
@@ -478,7 +478,7 @@
             <div class="col-md-6 mb-4">
               
               <!--Card-->
-              <div class="card">
+              <div class="card" style="display: none;">
                 
                 <!-- Card header -->
                 <div class="card-header">Google map</div>
@@ -1168,12 +1168,12 @@
                     <!--Card content-->
                     <div class="card-body">
                       
-                      <div class="text-center mb-5">
+                      <div class="text-center mb-5"  style="display:none;">
                         <p class="lead">Click buttons below to launch modals demo</p>
                       </div>
                       
                       <!-- First row-->
-                      <div class="row">
+                      <div class="row" style="display:none;">
                         
                         <!--First column-->
                         <div class="col-md-3">
@@ -1537,9 +1537,9 @@
             new Chart(document.getElementById("horizontalBar"), {
               "type": "horizontalBar",
               "data": {
-                "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+                "labels": ["This Week", "Last Week", "2 Weeks Ago", "3 Weeks Ago", "4 Weeks Ago", "5 Weeks Ago", "6 Weeks Ago"],
                 "datasets": [{
-                  "label": "My First Dataset",
+                  "label": "Weekly Earnings",
                   "data": [22, 33, 55, 12, 86, 23, 14],
                   "fill": false,
                   "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
