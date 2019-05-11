@@ -4,19 +4,21 @@
   <meta charset="utf-8">
   <title>Sign up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
   
   <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyD5mizPaS3A69q_aNrrtL3zzlcIWB42c_8",
-      authDomain: "trapteamvolunteers.firebaseapp.com",
-      databaseURL: "https://trapteamvolunteers.firebaseio.com",
-      projectId: "trapteamvolunteers",
-      storageBucket: "trapteamvolunteers.appspot.com",
-      messagingSenderId: "442999782760"
-    };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD5mizPaS3A69q_aNrrtL3zzlcIWB42c_8",
+    authDomain: "trapteamvolunteers.firebaseapp.com",
+    databaseURL: "https://trapteamvolunteers.firebaseio.com",
+    projectId: "trapteamvolunteers",
+    storageBucket: "trapteamvolunteers.appspot.com",
+    messagingSenderId: "442999782760"
+  };
+  firebase.initializeApp(config);
   </script>
   <!-- Firebase App is always required and must be first -->
   <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
@@ -57,48 +59,71 @@
     </div>
     <main class="mdl-layout__content">
       <div class="page-content" style='padding-left: 5%;padding-right: 5%;'>
-        <form action="#"">
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            <input class="mdl-textfield__input" type="email" id="sample1"required>
-            <label class="mdl-textfield__label" for="sample1">Email...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            <input class="mdl-textfield__input" type="password" id="sample1"required>
-            <label class="mdl-textfield__label" for="sample1">Password...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            <input class="mdl-textfield__input" type="password" id="sample1" required>
-            <label class="mdl-textfield__label" for="sample1">Confirm Password...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            <input class="mdl-textfield__input" type="tel" id="sample1"required>
-            <label class="mdl-textfield__label" for="sample1">Phone Number</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            
-            <label for="adr"class="mdl-textfield__label"> Address</label>
-            <input  class="mdl-textfield__input"type="text" id="adr" name="address" placeholder="542 W. 15th Street"required>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            
-            <label for="city"class="mdl-textfield__label"> City</label>
-            <input  class="mdl-textfield__input"type="text" id="city" name="city" placeholder="New York"required>
-          </div>
+        <amp-consent layout="nodisplay" id="consent-element">
+          <script type="application/json">
+          {
+            "consents": {
+              "my-consent": {
+                "checkConsentHref": "https://example.com/api/show-consent",
+                "promptUI": "consent-ui"
+              }
+            }
+          }
+          </script>
+        </amp-consent>
+        <amp-img alt="A view of the sea"
+        src="//trapteam690333707.files.wordpress.com/2018/08/wordmark_of_tidningarnas_telegrambyrc3a5_tt1.png"
+        width="900"
+        height="700"
+        layout="responsive">
+      </amp-img>
+      <form action="https://script.google.com/macros/s/AKfycbzIWGUs21D1daJ8WjFZlJEPbHTrpOJ1QmKsMO5E0V3RPT-CR_c/exec" method="post">
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          <input class="mdl-textfield__input" type="email" id="sample1"required>
+          <label class="mdl-textfield__label" for="sample1">Email...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          <input class="mdl-textfield__input" type="password" id="sample1"required>
+          <label class="mdl-textfield__label" for="sample1">Password...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          <input class="mdl-textfield__input" type="password" id="sample1" required>
+          <label class="mdl-textfield__label" for="sample1">Confirm Password...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          <input class="mdl-textfield__input" type="tel" id="sample1"required>
+          <label class="mdl-textfield__label" for="sample1">Phone Number</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
           
-          <div class="mdl-textfield mdl-js-textfield" style='display:block'>
-            <input  class="mdl-textfield__input"type="text" id="zip" name="zip" placeholder="10001"required>
-            <label for="zip"class="mdl-textfield__label">Zip</label>
-            
-          </div>
-          <!-- Colored raised button -->
-          <input type="submit"class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-        </input>
+          <label for="adr"class="mdl-textfield__label"> Address</label>
+          <input  class="mdl-textfield__input"type="text" id="adr" name="address" placeholder="542 W. 15th Street"required>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          
+          <label for="city"class="mdl-textfield__label"> City</label>
+          <input  class="mdl-textfield__input"type="text" id="city" name="city" placeholder="New York"required>
+        </div>
         
-      </form>
-    </div>
-  </main>
+        <div class="mdl-textfield mdl-js-textfield" style='display:block'>
+          <input  class="mdl-textfield__input"type="text" id="zip" name="zip" placeholder="10001"required>
+          <label for="zip"class="mdl-textfield__label">Zip</label>
+          
+        </div>
+        <!-- Colored raised button -->
+        <input type="submit"class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+      </input>
+      
+    </form>
+    
+  </div>
+</main>
 </div>    <!-- Simple Textfield -->
-
+<amp-facebook-comments width=486 height=657
+layout="responsive"
+data-numposts="5"
+data-href="http://localhost/ttv/ut89357">
+</amp-facebook-comments>
 
 </body>
 </html>
